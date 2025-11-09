@@ -1,0 +1,465 @@
+<html><head>
+		<meta charset="UTF-8">
+		<script src="nui://game/ui/jquery.js" type="text/javascript"></script><style type="text/css" id="operaUserStyle"></style>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">    
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">    
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+		<link href="css.css" rel="stylesheet" type="text/css">
+	</head>
+	<body> 
+
+	<div class="container">
+		<div class="pagina-done">
+			<div class="lado">
+				<div class="titlo-painel"><img src="assets/logo.png" alt=""><ss id="empresa">MECANICO</ss></div>
+				<div class="separador"></div>
+				<div class="lista-botoes">
+					<div class="categoria">Geral <i class="fa-sharp fa-solid fa-chevron-down"></i></div>
+					<div class="botao" onclick="trocar_pagina('inicio')"><i class="fa-duotone fa-house iconePrimeiro"></i> Dashboard</div>
+					<div class="botao" onclick="trocar_pagina('membros')"><i class="fa-duotone fa-users iconePrimeiro"></i> Membros</div>
+					<div class="botao" onclick="trocar_pagina('banco')"><i class="fa-duotone fa-bank iconePrimeiro"></i> Banco</div>
+					<div class="botao" onclick="trocar_pagina('vendas')"><i class="fa-duotone fa-coin iconePrimeiro"></i> Vendas</div>
+					<div class="botao" onclick="trocar_pagina('ranking')"><i class="fa-duotone fa-crown iconePrimeiro"></i> Ranking</div>
+					<label for="dark-mode">
+						<div class="switch">
+						  <input id="dark-mode" type="checkbox">
+						  <div class="insetcover">
+							<div class="sun-moon sun"></div>
+							<div class="sun-moon moon"></div>
+							<div class="stars"></div>
+						  </div>
+						  <div class="sun-moon-shadow"></div>
+						  <div class="shadow-overlay"></div>
+						</div>
+					</label>
+					<div class="ajuda-box">
+						<img class="ajuda" src="assets/background1.png" alt="">
+						<div class="box-simbolo"><i class="fa-solid fa-circle-question iconSimbolo"></i></div>
+						<div class="precisoAjuda">Encontrou erros ?</div>
+						<div class="precisoAjuda2">Achou algum erro abra um ticket no nosso discord.</div>
+					</div>
+				</div>
+			</div>
+	
+			<div class="meio">
+				<div class="pagina-dashboard" style="display: none;">
+	
+					<div class="box-usuario">
+						<div class="nome-personagem" id="nome1"></div>
+						<img class="imagem-personagem" id="imagem1" src="assets/imagem-invalida-user.png" alt="" onerror="if (this.src != 'assets/imagem-invalida-user.png') this.src = 'assets/imagem-invalida-user.png';">
+						<div class="pulse-personagem"></div>
+					</div>
+	
+					<div class="titlo-pequeno">Pages <span>/ Dashboard</span></div>
+					<div class="titlo-pequeno2">Dashboard</div>
+	
+					<div class="contadores-box">
+						<div class="contadores">
+							<div class="T1-Contadores">Membros Online</div>
+							<div class="T2-Contadores" id="membros">30</div>
+							<div class="icone-contadores"><i class="fa-duotone fa-users"></i></div>
+						</div>
+						<div class="contadores">
+							<div class="T1-Contadores">Banco</div>
+							<div class="T2-Contadores" id="banco">0</div>
+							<div class="icone-contadores"><i class="fa-duotone fa-bank"></i></div>
+						</div>
+						<div class="contadores">
+							<div class="T1-Contadores">Ranking</div>
+							<div class="T2-Contadores" id="rank">5º</div>
+							<div class="icone-contadores"><i class="fa-duotone fa-crown"></i></div>
+						</div>
+					</div>
+					<small></small>
+					<div class="anuncios-box">
+						<div class="titlo-anuncios">Anuncios</div>
+						<div class="adicionar-anuncio" onclick="format('fazer-anuncio')"><i class="fa-solid fa-plus"></i></div>
+						<div class="overflow-anuncios"></div>
+					</div>
+	
+					<div class="chat-box">
+						<div class="titlo-chat">Chat <span id="empresa2"></span></div>
+						<div class="chat-overflow"></div>
+				
+						<div class="box-chat-input">
+							<input type="text" placeholder="Escreva algo.." id="chat-input">
+							<div class="enviar-mensagem" onclick="enviarChat()"><i class="fa-solid fa-paper-plane-top"></i></div>
+						</div>
+	
+					</div>
+					<div class="grafico-box">
+						<div class="grafico">
+							<div class="numero">60</div>
+							<div class="numero">45</div>
+							<div class="numero">30</div>
+							<div class="numero">20</div>
+							<div class="numero">10</div>
+							<div class="numero">0</div>
+							<div class="grafico-background">
+								<div class="bar" id="bar1"><span class="tooltip"><i class="fa-duotone fa-user IconeTooltip"></i> <ss id="bnumero1"></ss> <span> <i class="fa-duotone fa-timer IconeTooltip"></i>02:00</span></span></div>
+								<div class="bar" id="bar2"><span class="tooltip"><i class="fa-duotone fa-user IconeTooltip"></i> <ss id="bnumero2"></ss> <span> <i class="fa-duotone fa-timer IconeTooltip"></i>04:00</span></span></div>
+								<div class="bar" id="bar3"><span class="tooltip"><i class="fa-duotone fa-user IconeTooltip"></i> <ss id="bnumero3"></ss> <span> <i class="fa-duotone fa-timer IconeTooltip"></i>06:00</span></span></div>
+								<div class="bar" id="bar4"><span class="tooltip"><i class="fa-duotone fa-user IconeTooltip"></i> <ss id="bnumero4"></ss><span> <i class="fa-duotone fa-timer IconeTooltip"></i>08:00</span></span></div>
+								<div class="bar" id="bar5"><span class="tooltip"><i class="fa-duotone fa-user IconeTooltip"></i> <ss id="bnumero5"></ss><span> <i class="fa-duotone fa-timer IconeTooltip"></i>10:00</span></span></div>
+								<div class="bar" id="bar6"><span class="tooltip"><i class="fa-duotone fa-user IconeTooltip"></i> <ss id="bnumero6"></ss><span> <i class="fa-duotone fa-timer IconeTooltip"></i>12:00</span></span></div>
+								<div class="bar" id="bar7"><span class="tooltip"><i class="fa-duotone fa-user IconeTooltip"></i> <ss id="bnumero7"></ss><span> <i class="fa-duotone fa-timer IconeTooltip"></i>14:00</span></span></div>
+								<div class="bar" id="bar8"><span class="tooltip"><i class="fa-duotone fa-user IconeTooltip"></i> <ss id="bnumero8"></ss><span> <i class="fa-duotone fa-timer IconeTooltip"></i>16:00</span></span></div>
+								<div class="bar" id="bar9"><span class="tooltip"><i class="fa-duotone fa-user IconeTooltip"></i> <ss id="bnumero9"></ss><span> <i class="fa-duotone fa-timer IconeTooltip"></i>18:00</span></span></div>
+								<div class="bar" id="bar10"><span class="tooltip"><i class="fa-duotone fa-user IconeTooltip"></i> <ss id="bnumero10"></ss><span> <i class="fa-duotone fa-timer IconeTooltip"></i>20:00</span></span></div>
+								<div class="bar" id="bar11"><span class="tooltip"><i class="fa-duotone fa-user IconeTooltip"></i> <ss id="bnumero11"></ss><span> <i class="fa-duotone fa-timer IconeTooltip"></i>22:00</span></span></div>
+								<div class="bar" id="bar12"><span class="tooltip"><i class="fa-duotone fa-user IconeTooltip"></i> <ss id="bnumero12"></ss><span> <i class="fa-duotone fa-timer IconeTooltip"></i>00:00</span></span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pagina-membros" style="display: none;">
+					<div class="box-usuario">
+						<div class="nome-personagem" id="nome2"></div>
+						<img class="imagem-personagem" id="imagem2" src="assets/imagem-invalida-user.png" alt="" onerror="if (this.src != 'assets/imagem-invalida-user.png') this.src = 'assets/imagem-invalida-user.png';">
+						<div class="pulse-personagem"></div>
+					</div>
+					<div class="titlo-pequeno">Pages <span>/ Ver Membros</span></div>
+					<div class="titlo-pequeno2">Ver Membros</div>
+					<div class="box-membros">
+						<div class="titlo-boxmembros">Contratados</div>
+						<div class="titlo-boxmembros2">Gerencie os membros da <b id="empresa3">Mecanica</b></div>
+					</div>
+					<div class="searhbar-backgrond">
+						<i class="fa-duotone fa-search iconsearch1"></i>
+						<input type="text" placeholder="Procurar..." id="procurar-membros">
+					</div>
+					<div class="contratar-backgrond" onclick="OpenInserirPassaporte()"><i class="fa-duotone fa-paperclip"></i> <b>Contratar</b></div>
+					<div class="header-membros">
+						<div class="h-1" style="width: 15%;">Passaporte</div>
+						<div class="h-1" style="width: 30%;">Membro</div>
+						<div class="h-1" style="width: 17%;">Status</div>
+						<div class="h-1" style="width: 20%;">Contratante</div>
+						<div class="h-1" style="width: 17%;">Acoes</div>
+					</div>
+					<div class="overflow-membros"></div>
+				</div>
+				<div class="pagina-banco" style="display: none;">
+					<div class="box-usuario">
+						<div class="nome-personagem" id="nome3"></div>
+						<img class="imagem-personagem" id="imagem3" src="assets/imagem-invalida-user.png" onerror="if (this.src != 'assets/imagem-invalida-user.png') this.src = 'assets/imagem-invalida-user.png';">
+						<div class="pulse-personagem"></div>
+					</div>
+					<div class="titlo-pequeno">Pages <span>/ Banco</span></div>
+					<div class="titlo-pequeno2">Banco</div>
+					<div class="cartao-banco"><img src="assets/card.png" alt=""></div>
+					<div class="box-valor-banco">
+						<div class="icon-text-wrapper">
+							<div class="img-icon-valor"><i class="fa-duotone fa-piggy-bank"></i></div>
+						</div>
+						<div class="text-icon-valor">Banco</div>
+						<div class="text2-icon-valor">Valor no banco</div>
+						<div class="separador-icon-valor"></div>
+						<div class="valor-icon" id="banco2">0 $</div>
+					</div>
+					<div class="box-valor-banco2">
+						<div class="icon-text-wrapper">
+							<div class="img-icon-valor"><i class="fa-duotone fa-wallet"></i></div>
+						</div>
+						<div class="text-icon-valor">Carteira</div>
+						<div class="text2-icon-valor">Valor na mochila</div>
+						<div class="separador-icon-valor"></div>
+						<div class="valor-icon" id="carteira">0 $</div>
+					</div>
+					<div class="box-botoes-extrato">
+						<div class="botao-do-extrato depositar-b" onclick="openFormatDepositar()">DEPOSITAR</div>
+						<div class="botao-do-extrato sacar-b" onclick="openFormatSacar()" style="margin-left: 3%;">SACAR</div>
+					</div>
+					<div class="box-banco-extrato">
+						<div class="titlo-box-extrato">Extrato Banco</div>
+						<div class="overflow-banco-extrato"></div>
+					</div>
+					<div class="box-enquete">
+						<div class="overlay">
+							<div class="overlay-titlo">Realize pagamentos</div>
+							<div class="overlay-desc">Transfira dinheiro para os seus membros diretamente do banco !</div>
+							<div class="overlay-botao" onclick="trocar_pagina('membros')">Clique aqui <i class="fa-sharp fa-solid fa-arrow-right IconBotaoOverLay"></i></div>
+						</div>
+					</div>
+					<div class="grafico-box-extrato">
+						<div class="visualizar-grafico">Visualizar Grafico</div>
+						<div class="grafico-background-extrato">
+							<div class="bar-extrato" id="barExtrato1"><span class="tooltip"><i class="fa-duotone fa-wallet IconeTooltip"></i> <ss id="benumero1"></ss> <span> </span></span></div>
+							<div class="bar-extrato" id="barExtrato2"><span class="tooltip"><i class="fa-duotone fa-wallet IconeTooltip"></i> <ss id="benumero2"></ss> <span> </span></span></div>
+							<div class="bar-extrato" id="barExtrato3"><span class="tooltip"><i class="fa-duotone fa-wallet IconeTooltip"></i> <ss id="benumero3"></ss> <span> </span></span></div>
+							<div class="bar-extrato" id="barExtrato4"><span class="tooltip"><i class="fa-duotone fa-wallet IconeTooltip"></i> <ss id="benumero4"></ss> <span> </span></span></div>
+							<div class="bar-extrato" id="barExtrato5"><span class="tooltip"><i class="fa-duotone fa-wallet IconeTooltip"></i> <ss id="benumero5"></ss> <span> </span></span></div>
+							<div class="bar-extrato" id="barExtrato6"><span class="tooltip"><i class="fa-duotone fa-wallet IconeTooltip"></i> <ss id="benumero6"></ss> <span> </span></span></div>
+							<div class="bar-extrato" id="barExtrato7"><span class="tooltip"><i class="fa-duotone fa-wallet IconeTooltip"></i> <ss id="benumero7"></ss> <span> </span></span></div>
+							<div class="bar-extrato" id="barExtrato8"><span class="tooltip"><i class="fa-duotone fa-wallet IconeTooltip"></i> <ss id="benumero8"></ss> <span> </span></span></div>
+							<div class="bar-extrato" id="barExtrato9"><span class="tooltip"><i class="fa-duotone fa-wallet IconeTooltip"></i> <ss id="benumero9"></ss> <span> </span></span></div>
+							<div class="bar-extrato" id="barExtrato10"><span class="tooltip"><i class="fa-duotone fa-wallet IconeTooltip"></i> <ss id="benumero10"></ss> <span> </span></span></div>
+							<div class="bar-extrato" id="barExtrato11"><span class="tooltip"><i class="fa-duotone fa-wallet IconeTooltip"></i> <ss id="benumero11"></ss> <span> </span></span></div>
+							<div class="bar-extrato" id="barExtrato12"><span class="tooltip"><i class="fa-duotone fa-wallet IconeTooltip"></i> <ss id="benumero12"></ss> <span> </span></span></div>
+						</div>
+					</div>
+				</div>
+				<div class="pagina-vendas" style="display: none;">
+					<div class="box-usuario">
+						<div class="nome-personagem" id="nome4"></div>
+						<img class="imagem-personagem" id="imagem4" src="assets/imagem-invalida-user.png" alt="" onerror="if (this.src != 'assets/imagem-invalida-user.png') this.src = 'assets/imagem-invalida-user.png';">
+						<div class="pulse-personagem"></div>
+					</div>
+	
+					<div class="titlo-pequeno">Pages <span>/ Vendas</span></div>
+					<div class="titlo-pequeno2">Vendas</div>
+
+					<div class="box-membros">
+						<div class="titlo-boxmembros">Vendas</div>
+						<div class="titlo-boxmembros2">Gerencie as <b>vendas</b> da <b id="empresa4">Mecanica</b></div>
+						<div class="contratar-backgrond" onclick="format('adicionarvenda')"><i class="fa-duotone fa-plus"></i> <b>Nova Venda</b></div>
+						<div class="header-membros">
+							<div class="h-1" style="width: 15%;">Venda</div>
+							<div class="h-1" style="width: 30%;">Vendedor</div>
+							<div class="h-1" style="width: 38%;">Valor</div>
+							<div class="h-1" style="width: 17%;">Acoes</div>
+						</div>
+						<div class="overflow-vendas">
+	
+						</div>
+					</div>
+				</div>
+				<div class="pagina-ranking" style="display: none;">
+					<div class="box-usuario">
+						<div class="nome-personagem" id="nome5"></div>
+						<img class="imagem-personagem" id="imagem4" src="assets/imagem-invalida-user.png" alt="" onerror="if (this.src != 'assets/imagem-invalida-user.png') this.src = 'assets/imagem-invalida-user.png';">
+						<div class="pulse-personagem"></div>
+					</div>
+	
+					<div class="titlo-pequeno">Pages <span>/ Ranking</span></div>
+					<div class="titlo-pequeno2">Ranking</div>
+
+					<div class="box-membros">
+						<div class="titlo-boxmembros">Ranking</div>
+						<div class="titlo-boxmembros2">O <b>ranking</b> das <b>empresas</b> da cidade</div>
+	
+						<div class="header-membros">
+							<div class="h-1" style="width: 17%;">Top</div>
+							<div class="h-1" style="width: 40%;">Empresa</div>
+							<div class="h-1" style="width: 43%;">Valor</div>
+						</div>
+						<div class="overflow-ranking">
+							<div class="item-ranking">
+								<div class="rk-0">
+									<span>#1</span>
+								</div>
+								<div class="rk-1">
+									<img src="assets/imagem-invalida-user.png" alt="">
+									<div class="rk-1-t">Cafe UwU</div>
+								</div>
+								<div class="rk-2">
+									<i class="fa-duotone fa-sack-dollar"></i> 
+									<span>${key.valor} $</span>
+								</div>
+							</div>
+							<div class="item-ranking">
+								<div class="rk-0">
+									<span>#1</span>
+								</div>
+								<div class="rk-1">
+									<img src="assets/imagem-invalida-user.png" alt="">
+									<div class="rk-1-t">Cafe UwU</div>
+								</div>
+								<div class="rk-2">
+									<i class="fa-duotone fa-sack-dollar"></i> 
+									<span>${key.valor} $</span>
+								</div>
+							</div>
+							<div class="item-ranking">
+								<div class="rk-0">
+									<span>#1</span>
+								</div>
+								<div class="rk-1">
+									<img src="assets/imagem-invalida-user.png" alt="">
+									<div class="rk-1-t">Cafe UwU</div>
+								</div>
+								<div class="rk-2">
+									<i class="fa-duotone fa-sack-dollar"></i> 
+									<span>${key.valor} $</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="format" style="display: none;">
+				<div class="format-anuncio-box" style="display: none;">
+					<div class="fa-titlo">Criar anuncio</div>
+					<div class="fa-fechar" onclick="fechar_format('')"><i class="fad fa-times"></i></div>
+					<img class="fa-img" src="assets/bf95eb13-1733-48d7-8626-975fa90889c9.png" alt="">
+					<div class="fa-descImg">Crie um anuncio para os membros da sua empresa ficarem cientes dos acontecimentos</div>
+					<div class="fa-inputText">Escreva o anuncio</div>
+					<div class="fa-input">
+						<input type="text" placeholder="Escrever.." id="inputAnuncio">
+					</div>
+					<div class="fa-EnviarAnuncio" id="enviarAnuncio" onclick="enviarAnuncio()">Enviar</div>
+				</div>
+				<div class="format-contratar-box" style="display: none;">
+					<div class="fa-titlo">Insira o Passaporte</div>
+					<div class="fa-fechar" onclick="fechar_format('')"><i class="fad fa-times"></i></div>
+					<img class="fa-img" src="assets/bf95eb13-1733-48d7-8626-975fa90889c9.png" alt="">
+					<div class="fa-descImg">Insira o passaporte para voce contratar</div>
+					<div class="fa-inputText">Passaporte</div>
+					<div class="fa-input">
+						<input type="text" placeholder="Escrever.." id="inputContratar">
+					</div>
+					<div class="fa-EnviarAnuncio" onclick="contratar()">Contratar</div>
+				</div>
+				<div class="format-bank-box" style="display: none;">
+					<div class="fa-titlo">Insira o Valor</div>
+					<div class="fa-fechar2" onclick="fechar_format('')"><i class="fad fa-times"></i></div>
+					<img class="fa-img" src="assets/bank.png" alt="">
+					<div class="fa-descImg">Insira quanto voce quer depositar</div>
+					<div class="fa-inputText">Valor</div>
+					<div class="fa-input">
+						<input type="number" placeholder="Escrever.." id="inputValorDepositar">
+					</div>
+					<div class="fa-EnviarAnuncio" onclick="depositarConfirmar()">Depositar</div>
+				</div>
+				<div class="format-bank2-box" style="display: none;">
+					<div class="fa-titlo">Insira o Valor</div>
+					<div class="fa-fechar2" onclick="fechar_format('')"><i class="fad fa-times"></i></div>
+					<img class="fa-img" src="assets/bank.png" alt="">
+					<div class="fa-descImg">Insira quanto voce quer sacar</div>
+					<div class="fa-inputText">Valor</div>
+					<div class="fa-input">
+						<input type="number" placeholder="Escrever.." id="inputValorSacar">
+					</div>
+					<div class="fa-EnviarAnuncio" onclick="sacarConfirmar()">Sacar</div>
+				</div>
+
+				<div class="format-adicionarvenda" style="display: none;">
+					<div class="fa-titlo-venda">Registre a sua venda</div>
+					<div class="fa-fechar2-venda" onclick="fechar_format('')"><i class="fad fa-times"></i></div>
+					<div class="box-adicionarvenda1-g">
+						<div class="box-adicionarvenda1">
+							<img src="assets/ff90ceb5-2539-4ee9-b2ec-a5105705155d.png" alt="">
+							<div class="fa-inputText">Comprador</div>
+							<div class="fa-input">
+								<input placeholder="Escrever.." id="compradorinput">
+							</div>
+							<div class="fa-inputText">Valor da venda</div>
+							<div class="fa-input">
+								<input type="number" placeholder="Escrever.." id="vendainputvalor">
+							</div>
+							<div class="confirmar-criar-venda" onclick="CriarVenda()">Criar Venda</div>
+						</div>
+						<div class="box-adicionarvenda2">
+							<div class="search-itemit">
+								<i class="fa-duotone fa-search iconsearch1"></i>
+								<input type="text" placeholder="Procurar item..." id="procurar-item">
+							</div>
+							<div class="overflow-adicionaritem"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="format-adicionarquantia" style="display: none;">
+					<div class="fa-titlo-adicionarqtd">Editar Item</div>
+					<div class="fa-fechar2-adicionarqtd" onclick="fechar_format('')"><i class="fad fa-times"></i></div>
+					<div class="aviso-adicionarquantia">
+						<div class="aviso-adicionarquantia-box">
+							<div class="aviso-adicionarquantia-t">Insira a quantia para poder continuar a sua criaçao de venda.</div>
+							<div class="item-adicionarquantia">
+								<img src="assets/abobora.png" alt="">
+								<div class="item-adicionarquantia-n">Abobora</div>
+							</div>
+						</div>
+					</div>
+					<div class="fa-inputText" style="margin-top: 4%;">Valor da venda</div>
+					<div class="fa-input">
+						<input type="number" placeholder="Escrever.." id="adicionarquantia">
+					</div>
+					<div class="confirmar-editar-venda" onclick="InserirTabela()">Editar Item</div>
+				</div>
+
+				<div class="format-ver-venda" style="display: none;">
+					<div class="vervenda-fechar" onclick="fechar_format()"><i class="fad fa-times"></i></div>
+					<div class="fa-titlo-ver-venda">Ver venda <jdsa id="iddavenda" style="color: #295CDE;">#8823</jdsa></div>
+					<div class="box-informacoes-venda">
+						<div class="box-informacoes-venda2">
+							<div class="t-venda1">Data da venda</div>
+							<div class="t-venda2" id="DataVendaBox">11/11/2022 (30:33) </div>
+						</div>
+						<div class="box-informacoes-venda2">
+							<div class="t-venda1">Valor da venda</div>
+							<div class="t-venda2" id="ValorVendaBox" style="color: rgb(91, 185, 29);">$ 30,000</div>
+						</div>
+					</div>
+					<div class="overflow-itens">
+						<div class="item-BausGerenciarOverFlow ativo" onclick="InserirTabela(this)" data-k="${key.k}">
+							<img src="assets/abobora.png" alt="">
+							<div class="nome-BausGerenciarOverFlow"><span>50x</span> Abobora</div>
+							<div class="checkbox-BausGerenciarOverFlow ativo"></div>
+						</div>	
+					</div>
+					<img class="img-vendedor" src="assets/imagem-invalida-user.png" onerror="if (this.src != 'assets/imagem-invalida-user.png') this.src = 'assets/imagem-invalida-user.png';">
+					<div class="nome-vendedor"><jdsajdjas id="nome-vendedor"></jdsajdjas> <jdsa id="passaporte-vendedor" style="color: #295CDE;">#1</jdsa></div>
+					<div class="titlo-vendedor">Vendedor</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="pagina-login" style="display: none;">
+			<div class="ddd">
+				<img class="img-destauqe" src="assets/backgou.png" alt="">
+			</div>
+			<div class="lad">
+				<div class="text-bemvindo">Bem-vindo (a), <spsan id="nome-l"></spsan></div>
+				<div class="text-bemvindo2">Escolha um dos <b>paineis</b> que voce tem acesso para o <b>gerenciar</b></div>
+				<div class="overflow-logins"></div>
+			</div>
+		</div>
+	</div>
+	  
+
+
+	<script src="jquery.js" type="text/javascript"></script>
+
+	<script>
+			$('.bar').hover(
+				function() {
+					var tooltip = $(this).find('.tooltip');
+					tooltip.data('timeout', setTimeout(function() {
+						tooltip.show();
+					}, 200));
+				},
+				function() {
+					clearTimeout($(this).find('.tooltip').data('timeout'));
+					$(this).find('.tooltip').hide();
+				}
+			);
+			$('.bar-extrato').hover(
+				function() {
+					var tooltip = $(this).find('.tooltip');
+					tooltip.data('timeout', setTimeout(function() {
+						tooltip.show();
+					}, 200));
+				},
+				function() {
+					clearTimeout($(this).find('.tooltip').data('timeout'));
+					$(this).find('.tooltip').hide();
+				}
+			);
+	</script>
+	
+</body></html>

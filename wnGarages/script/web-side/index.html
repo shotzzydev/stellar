@@ -1,0 +1,113 @@
+<html><head>
+	<meta charset="UTF-8">
+ 	<script src="nui://game/ui/jquery.js"></script>
+  	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+ 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+  	<link rel="stylesheet" href="css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<div class="background-nuis">
+		<div class="retangulos1">
+			<div class="background-retangulos"></div>
+			<div class="background-retangulos"></div>
+			<div class="background-retangulos"></div>
+		</div>
+		<div class="retangulos2">
+			<div class="background-retangulos2"></div>
+			<div class="background-retangulos2"></div>
+			<div class="background-retangulos2"></div>
+		</div>
+		<div class="retangulos3">
+			<div class="background-retangulos3"></div>
+			<div class="background-retangulos3"></div>
+			<div class="background-retangulos3"></div>
+		</div>
+		<div class="retangulos4">
+			<div class="background-retangulos4"></div>
+			<div class="background-retangulos4"></div>
+			<div class="background-retangulos4"></div>
+		</div>
+	</div>
+
+	<div class="container">	
+		<div class="lado-esquerdo">
+			<div class="input-box">
+				<img class="search-icon" src="assets/search.png">
+				<input id="input" type="text" placeholder="Procurar veiculo...">
+			</div>
+			<div class="overflow-carros"></div>
+		</div>
+		
+		<div class="lado-direito" id="pagina-carro" style="display: none;">
+			<div class="infcarro">
+				<div class="cima">
+					<div class="nome-carro2"> <ss id="nomecarro"></ss> <span class="categoria"></span></div>
+					<img class="img-marca" src="assets/logoinvalida2.png" onerror="if (src != 'assets/logoinvalida2.png') this.src = 'assets/logoinvalida2.png';">
+					<div class="box-placa"><img class="imagem-pen" src="assets/pen.png" alt=""><ss id="placa"></ss></div>
+				</div>
+
+				<img class="carro-meio" id="" src="" alt="">
+
+				<div class="baixo-infos">
+					<div class="item-baixo">
+						<div class="cima-t">
+							<img src="assets/gasolina.png" alt="">
+							<div class="cima-1">GASOLINA</div>
+						</div>
+						<div class="barra1">
+							<div class="barra2"><div class="barra3" id="gasolina"></div></div>
+						</div>
+						<div class="porcentagem" id="gasolinat">%</div>
+					</div>
+					<div class="item-baixo">
+						<div class="cima-t">
+							<img src="assets/motor.png" alt="">
+							<div class="cima-1">MOTOR</div>
+						</div>
+						<div class="barra1">
+							<div class="barra2"><div class="barra4" id="motor"></div></div>
+						</div>
+						<div class="porcentagem" id="motort">%</div>
+					</div>
+					<div class="item-baixo">
+						<div class="cima-t">
+							<img src="assets/lataria.png" alt="">
+							<div class="cima-1">LATARIA</div>
+						</div>
+						<div class="barra1">
+							<div class="barra2"><div class="barra4" id="lataria"></div></div>
+						</div>
+						<div class="porcentagem" id="latariat">%</div>
+					</div>
+				</div>
+				<div class="baixo2-infos">
+					<div class="botao retirar" onclick="retirarCarro()">RETIRAR</div>
+					<div class="botao" onclick="guardarcarro()">GUARDAR</div>
+				</div>
+				<div class="cima2-infos">
+					<div class="cima3-infos">
+						<div class="botao-loc" onclick="localizar()">LOCALIZAR</div>
+						<div class="botao-chave" onclick="darchave()"><img src="assets/chave.png" alt=""></div>
+						<div class="botao-bau" onclick="bau()"><img src="assets/bau.png" alt=""></div>
+					</div>
+					<div class="expira-em" style="display: none;">EXPIRA EM</div>
+					<div class="expira-em2" style="display: none;"></div>
+					<div class="expira-em3" style="display: none;" onclick="renovar()">RENOVAR</div>
+				</div>
+			</div>
+
+			<div class="bau" style="display: none;">
+				<div class="cima">
+					<div class="nome-carro2"> <ss id="nomecarro-bau">Ferrari Italia</ss> <small style="font-size: 14px;">(BAU)</small></div>
+				</div>
+				<div class="overflow-itens">
+				</div>
+			</div>
+		</div>
+	</div> 
+
+	<script src="jquery.js" type="text/javascript"></script>
+
+</body></html>

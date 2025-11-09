@@ -1,0 +1,2075 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap'); @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap'); html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    height: 100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow-block: hidden;
+    overflow: hidden;
+    /* background-repeat: no-repeat; background-image: url(https://media.discordapp.net/attachments/1157069784446414898/1279590076925612142/image.png?ex=66e96ddf&is=66e81c5f&hm=7cf37031099a43889dae33b1acd91812cf109964d791b485248d0a66ce51b756&=&format=webp&quality=lossless&width=1201&height=675); background-size: cover; background-position: center; */
+    display: none;
+}
+
+.background-banco::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,0.1825105042016807) 0%, rgba(35, 38, 53, 0.8) 100%);
+}
+
+.container {
+    width: 1500px;
+    height: 880px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 20px;
+    animation-name: zoomIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    background: #F5F5F8;
+}
+
+.header {
+    width: 97%;
+    height: 100px;
+    border-radius: 10px;
+    margin-top: 1.5%;
+    margin-left: 1.5%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logo-banco-box {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo-banco-box img {
+    margin-left: 10%;
+}
+
+.logo-banco-box .nome-banco {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    color: #1D1C1C;
+    margin-left: 5%;
+}
+
+.header-botoes-meio {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50%;
+    width: auto;
+    display: flex;
+}
+
+.botao {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 40px;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1D1C1C;
+    transition: all .5s;
+    margin-left: 5%;
+    outline: 3px solid transparent;
+}
+
+.active {
+    background: #1D1C1C;
+    color: #fff;
+    outline: 3px solid rgba(29, 28, 28, 0.2);
+}
+
+.botao:hover {
+    background: #1D1C1C;
+    color: #fff;
+    outline: 3px solid rgba(29, 28, 28, 0.2);
+}
+
+.header-user-profile {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    right: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.header-user-profile .imagem-personagem {
+    min-width: 50px;
+    max-width: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    border-radius: 100px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.botao-user-profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 86%, #ECECEC 100%);
+    border: 1px solid #E1E1E2;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    outline: 2px solid transparent;
+}
+
+.botao-user-profile:hover {
+    background: #f5f3f3;
+    outline: 2px solid #E1E1E2;
+}
+
+.botao-user-profile img {
+    max-width: 25px;
+    max-height: 25px;
+}
+
+.pagina {
+    width: 97%;
+    height: 80%;
+    border-radius: 10px;
+    margin-top: 1.5%;
+    margin-left: 1.5%;
+}
+
+.header-2 {
+    width: 100%;
+    height: 12%;
+    align-items: center;
+    display: flex;
+}
+
+.header-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, #F5F5F8 86%, #ECECEC 100%);
+    border: 1px solid #E1E1E2;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    outline: 2px solid transparent;
+}
+
+.header-circle img {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.box-circle {
+    width: auto;
+    height: 70%;
+}
+
+.nome-personagem2 {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    color: #1D1C1C;
+}
+
+.pagina-caminho {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: -0.5%;
+    color: #1D1C1C;
+}
+
+.box-search {
+    position: absolute;
+    right: 1.5%;
+    width: auto;
+    float: right;
+    display: flex;
+}
+
+.header-circle2 {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, #F5F5F8 86%, #ECECEC 100%);
+    border: 1px solid #E1E1E2;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    outline: 2px solid transparent;
+}
+
+.header-circle2:hover {
+    background: #f5f3f3;
+    outline: 2px solid #E1E1E2;
+}
+
+.header-circle3 {
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 60px;
+    border-radius: 60px;
+    border: 1px solid #E1E1E2;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    outline: 2px solid transparent;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.header-circle3 span {
+    margin-left: 15px;
+}
+
+.saldo-box {
+    width: 330px;
+    height: 340px;
+    border-radius: 30px;
+    background: #1D1C1C;
+    margin-top: 1%;
+    outline: 4px solid rgba(29, 28, 28, 0.2);
+}
+
+.saldo-boxt1 {
+    position: relative;
+    margin-left: 10%;
+    top: 7%;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.saldo-boxt2 {
+    margin-left: 10%;
+    margin-top: 8%;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    color: #fff;
+}
+
+.saldo-boxt2 small {
+    font-size: 25px;
+}
+
+.saldo-boxt2 span {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.botoes-saldo-box {
+    width: 80%;
+    height: 45px;
+    margin-left: 10%;
+    display: flex;
+}
+
+.botoes-saldo {
+    height: 45px;
+    width: 60px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+
+.botoes-saldo:nth-child(1) {
+    margin-left: 0%;
+}
+
+.botoes-saldo img {
+    width: 25px;
+    height: 25px;
+}
+
+.botoes-saldo span {
+    opacity: 0;
+    position: absolute;
+    margin-top: 6%;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    border-radius: 20px;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all .5s;
+}
+
+.botoes-saldo:hover span {
+    opacity: 1;
+}
+
+.saldo-boxt3 {
+    margin-left: 10%;
+    margin-top: 20%;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.barra-saldo1 {
+    width: 80%;
+    height: 40px;
+    border-radius: 60px;
+    margin-top: 3%;
+    margin-left: 10%;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barra-saldo2 {
+    width: 97%;
+    height: 80%;
+    border-radius: 60px;
+}
+
+.barra-saldo3 {
+    width: 80%;
+    height: 100%;
+    border-radius: 60px;
+    background: #D7FE03;
+    outline: 2px solid rgba(215, 254, 3, 0.2);
+}
+
+.ponta-barra {
+    width: 40px;
+    height: 40px;
+    border-radius: 60px;
+    margin-top: -1.8%;
+    position: relative;
+    display: flex;
+    float: right;
+    right: -7%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(92, 92, 92, 0.2);
+    border: 1px solid #5C5C5C;
+    backdrop-filter: blur(2px);
+}
+
+.ponta-barra img {
+    width: 20px;
+    height: 20px;
+}
+
+.saldo-boxt4 {
+    margin-left: 10%;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 5%;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.saldo-boxt4 b {
+    color: #fff;
+}
+
+.atms-box {
+    width: 330px;
+    height: 240px;
+    margin-top: 1.5%;
+    border-radius: 30px;
+    background: #fff;
+}
+
+.atms-boxt1 {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    color: #1D1C1C;
+    margin-left: 10%;
+    top: 10%;
+    position: relative;
+}
+
+.atms-boxt2 {
+    font-family: "Urbanist", sans-serif;
+    margin-left: 10%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 8%;
+    color: rgba(29, 28, 28, 0.4);
+}
+
+.atms-boxt2 b {
+    color: #1D1C1C;
+}
+
+.atms-box img {
+    width: 80%;
+    transition: all .5s;
+    margin-left: 10%;
+}
+
+.atms-box img:hover {
+    transform: scale(1.1);
+}
+
+.box2-box {
+    width: 710px;
+    height: 68.7%;
+    position: absolute;
+    top: 27.5%;
+    left: 25%;
+}
+
+.box2-box-displayflex {
+    display: flex;
+}
+
+.anuncios-box {
+    width: 400px;
+    height: 240px;
+    border-radius: 30px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-ads {
+    width: 180px;
+    height: 90%;
+    border-radius: 30px;
+    background: #D7FE03;
+}
+
+.card-espaco {
+    width: 10px;
+    height: 90%;
+}
+
+.card-ads img {
+    height: 80%;
+    margin-left: 5%;
+}
+
+.card-adst {
+    width: 60%;
+    margin-top: -8%;
+    margin-left: 10%;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #1D1C1C;
+}
+
+.imagem-pro {
+    position: relative;
+    left: 10%;
+    top: 10%;
+}
+
+.card-adst2 {
+    width: 40%;
+    margin-top: -8%;
+    margin-left: 10%;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #1D1C1C;
+}
+
+.investimentos-box {
+    width: 290px;
+    height: 240px;
+    margin-left: 20px;
+    background: white;
+    border-radius: 30px;
+}
+
+.botao-user-ir-investimentos {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 86%, #ECECEC 100%);
+    border: 1px solid #E1E1E2;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    margin-left: 78%;
+    margin-top: -8%;
+    outline: 2px solid transparent;
+}
+
+.botao-user-ir-investimentos:hover {
+    background: #f5f3f3;
+    outline: 2px solid #E1E1E2;
+}
+
+.botao-user-ir-investimentos img {
+    max-width: 25px;
+    max-height: 25px;
+}
+
+.card-investimentos-bitlit {
+    width: 80%;
+    height: 85px;
+    margin-left: 10%;
+    margin-top: 3%;
+    background: #1D1C1C;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    transition: all .5s;
+}
+
+.card-investimentos-bitlit:hover {
+    transform: scale(1.1);
+}
+
+.card-investimentos-bitlit img {
+    width: 40px;
+    height: 40px;
+    margin-left: 10%;
+}
+
+.box-cima-investimento {
+    width: 100%;
+    display: flex;
+}
+
+.nome-investimento {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    width: 30%;
+}
+
+.porcentagem-investimento {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    width: 70%;
+    text-align: right;
+}
+
+.valor-investimento {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+    width: 60%;
+}
+
+.horas-investimento {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+    width: 40%;
+    text-align: right;
+}
+
+.box-investimento-infos {
+    width: 60%;
+    height: 40%;
+    margin-left: 5%;
+}
+
+.card-investimentos-bitlit2 {
+    width: 80%;
+    height: 85px;
+    margin-left: 10%;
+    margin-top: -5%;
+    background: #d7fe03;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    transition: all .5s;
+}
+
+.card-investimentos-bitlit2 img {
+    width: 40px;
+    height: 40px;
+    margin-left: 10%;
+}
+
+.black-text {
+    color: #1D1C1C;
+}
+
+.black-text-o {
+    color: rgba(29, 28, 28, 0.4);
+}
+
+.card-investimentos-bitlit2:hover {
+    transform: scale(1.1);
+}
+
+.grafico-box {
+    width: 100%;
+    height: 345px;
+    background: white;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.grafico-boxt1 {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    margin-left: 5%;
+    top: 7%;
+    position: relative;
+}
+
+.grafico-container {
+    width: 90%;
+    height: 75%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.box3-box {
+    width: 360px;
+    height: 68.7%;
+    position: absolute;
+    top: 27.5%;
+    left: 73.5%;
+    border-radius: 30px;
+    background: white;
+}
+
+.historico-boxt1 {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    color: #1D1C1C;
+    margin-left: 10%;
+    top: 4%;
+    position: relative;
+}
+
+.botao-user-ir-historico {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 86%, #ECECEC 100%);
+    border: 1px solid #E1E1E2;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    margin-left: 81%;
+    margin-top: -5%;
+    outline: 2px solid transparent;
+}
+
+.botao-user-ir-historico:hover {
+    background: #f5f3f3;
+    outline: 2px solid #E1E1E2;
+}
+
+.botao-user-ir-historico img {
+    max-width: 25px;
+    max-height: 25px;
+}
+
+.overflow-historico {
+    width: 90%;
+    height: 85%;
+    margin-left: 5%;
+    overflow: auto;
+}
+
+.item-historico {
+    width: 99%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 2%;
+}
+
+.item-historico img {
+    min-width: 60px;
+    max-width: 60px;
+    min-height: 60px;
+    max-height: 60px;
+    border-radius: 100px;
+    margin-left: 5%;
+}
+
+.categoria-historico {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(29, 28, 28,0.4);
+    margin-left: 5%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.item-header-historico-box {
+    width: 72%;
+    height: 20px;
+    margin-left: 4%;
+    margin-top: -6.5%;
+}
+
+.item-header-historico-1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.text-header-historico-1-1 {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    color: #1D1C1C;
+    width: 50%;
+    font-size: clamp(14px, 4vw, 18px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-header-historico-1-2 {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: right;
+    width: 45%;
+    font-size: clamp(14px, 4vw, 18px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-header-historico-1-4 {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #1D1C1C;
+    text-align: right;
+    width: 45%;
+    font-size: clamp(14px, 4vw, 18px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-header-historico-1-3 {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #1D1C1C;
+    width: 50%;
+    font-size: clamp(14px, 4vw, 18px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 1px;
+    border-radius: 10px;
+    background: #ECECEC;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c4c3c3;
+    border-radius: 10px;
+    transition: all 1s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #D7FE03;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.overflow-verperfil::-webkit-scrollbar {
+    display: none;
+}
+
+.format {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(29, 28, 28,0.8);
+    border-radius: 20px;
+}
+
+.format-depositar {
+    width: 500px;
+    height: 370px;
+    border-radius: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.format-depositar2 {
+    width: 100%;
+    height: 300px;
+    background: white;
+    outline: 6px solid rgb(255, 255, 255,0.4);
+    border-radius: 30px;
+    position: absolute;
+}
+
+.format-depositar .titlo-format {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    color: #1D1C1C;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.format-depositar .desc-format {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(29, 28, 28);
+    margin-left: 5%;
+    margin-top: 1%;
+    width: 90%;
+}
+
+.format-depositar .desc-format b {
+    color: rgb(29, 28, 28);
+}
+
+.close-format {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    position: absolute;
+    right: 3%;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    top: 7.5%;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+}
+
+.close-format:hover {
+    color: #f54b4b;
+}
+
+.simbolo-format {
+    width: 50px;
+    height: 50px;
+    background: rgba(54, 115, 247, 0.2);
+    margin-top: 5%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+}
+
+.simbolo-format i {
+    font-size: 20px;
+    color: rgba(54, 115, 247);
+}
+
+.input-format-box {
+    width: 90%;
+    height: 70px;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.label-input-format {
+    color: #1B2D45;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.input-format-box2 {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgb(29, 28, 28,0.2);
+    border-radius: 40px;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+}
+
+.icone-input-format {
+    margin-left: 3%;
+}
+
+.input-format-box2 input {
+    width: 85%;
+    height: 100%;
+    outline: 0;
+    border: 0;
+    background: transparent;
+    margin-left: 5%;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: rgb(29, 28, 28);
+}
+
+.botao-confirmar-format {
+    width: 40%;
+    height: 40px;
+    position: absolute;
+    bottom: 3%;
+    left: 30%;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border-radius: 10px;
+    background: #D7FE03;
+    outline: 4px solid #D7FE0340;
+    color: rgb(29, 28, 28);
+    transition: all .5s;
+}
+
+.botao-confirmar-format:hover {
+    background: #bcdb09;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(29, 28, 28, 0.4);
+    }
+
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    }
+
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(29, 28, 28, 0.4);
+        box-shadow: 0 0 0 0 rgba(29, 28, 28, 0.4);
+    }
+
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+        box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    }
+
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+        box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+}
+
+.format-negado {
+    width: 500px;
+    height: 200px;
+    border-radius: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: white;
+    outline: 6px solid rgb(255, 255, 255,0.4);
+    border-radius: 30px;
+    animation-name: zoomIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.simbolo-format-negado {
+    width: 50px;
+    height: 50px;
+    background: rgba(247, 54, 54, 0.2);
+    margin-top: 5%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+}
+
+.simbolo-format-negado i {
+    font-size: 20px;
+    color: rgb(247, 54, 54);
+}
+
+.close-format-timer {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    position: absolute;
+    right: 3%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    top: 7.5%;
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    background: #1D1C1C;
+    color: #fff;
+    animation: pulse 2s infinite;
+}
+
+.format-negado .titlo-format {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    color: #1D1C1C;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.format-negado .desc-format {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(29, 28, 28);
+    margin-left: 5%;
+    margin-top: 1%;
+    width: 90%;
+}
+
+.format-negado .desc-format b {
+    color: rgb(29, 28, 28);
+}
+
+.format-sucesso {
+    width: 500px;
+    height: 200px;
+    border-radius: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: white;
+    outline: 6px solid rgb(255, 255, 255,0.4);
+    border-radius: 30px;
+    animation-name: zoomIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.simbolo-format-sucesso {
+    width: 50px;
+    height: 50px;
+    background: rgba(54, 247, 183, 0.2);
+    margin-top: 5%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+}
+
+.simbolo-format-sucesso i {
+    font-size: 20px;
+    color: rgb(54, 247, 183);
+}
+
+.close-format-timer {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    position: absolute;
+    right: 3%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    top: 7.5%;
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    background: #1D1C1C;
+    color: #fff;
+}
+
+.format-sucesso .titlo-format {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    color: #1D1C1C;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.format-sucesso .desc-format {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(29, 28, 28);
+    margin-left: 5%;
+    margin-top: 1%;
+    width: 90%;
+}
+
+.format-sucesso .desc-format b {
+    color: rgb(29, 28, 28);
+}
+
+.format-aviso {
+    width: 500px;
+    height: 200px;
+    border-radius: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: white;
+    outline: 6px solid rgb(255, 255, 255,0.4);
+    border-radius: 30px;
+    animation-name: zoomIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.simbolo-format-aviso {
+    width: 50px;
+    height: 50px;
+    background: rgba(247, 186, 54, 0.2);
+    margin-top: 5%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+}
+
+.simbolo-format-aviso i {
+    font-size: 20px;
+    color: rgb(247, 186, 54);
+}
+
+.close-format-timer {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    position: absolute;
+    right: 3%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    top: 7.5%;
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    background: #1D1C1C;
+    color: #fff;
+}
+
+.format-aviso .titlo-format {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    color: #1D1C1C;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.format-aviso .desc-format {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(29, 28, 28);
+    margin-left: 5%;
+    margin-top: 1%;
+}
+
+.format-sucesso .desc-format b {
+    color: rgb(29, 28, 28);
+}
+
+.format-transferir {
+    width: 500px;
+    height: 480px;
+    border-radius: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.format-transferir2 {
+    width: 100%;
+    height: 400px;
+    background: white;
+    outline: 6px solid rgb(255, 255, 255,0.4);
+    border-radius: 30px;
+    position: absolute;
+}
+
+.format-transferir .titlo-format {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    color: #1D1C1C;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.format-transferir .desc-format {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(29, 28, 28);
+    margin-left: 5%;
+    margin-top: 1%;
+}
+
+.format-transferir .desc-format b {
+    color: rgb(29, 28, 28);
+}
+
+.format-sacar {
+    width: 500px;
+    height: 370px;
+    border-radius: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    animation-name: zoomIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.format-sacar2 {
+    width: 100%;
+    height: 300px;
+    background: white;
+    outline: 6px solid rgb(255, 255, 255,0.4);
+    border-radius: 30px;
+    position: absolute;
+}
+
+.format-sacar .titlo-format {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    color: #1D1C1C;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.format-sacar .desc-format {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(29, 28, 28);
+    margin-left: 5%;
+    margin-top: 1%;
+    width: 90%;
+}
+
+.format-sacar .desc-format b {
+    color: rgb(29, 28, 28);
+}
+
+.format-multas {
+    width: 500px;
+    border-radius: 30px;
+    position: absolute;
+    left: 50%;
+    /* Alinha o centro horizontalmente */
+    top: 50%;
+    /* Alinha o centro verticalmente */
+    transform: translate(-50%, -50%);
+    /* Ajusta a posiÃ§Ã£o para o centro exato */
+    margin: auto;
+}
+
+.format-multas2 {
+    width: 100%;
+    height: auto;
+    padding-bottom: 15px;
+    background: white;
+    outline: 6px solid rgb(255, 255, 255,0.4);
+    border-radius: 30px;
+}
+
+.format-multas .titlo-format {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    color: #1D1C1C;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.format-multas .desc-format {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(29, 28, 28);
+    margin-left: 5%;
+    margin-top: 1%;
+    width: 90%;
+}
+
+.format-multas .desc-format b {
+    color: rgb(29, 28, 28);
+}
+
+.simbolo-format-multas {
+    width: 50px;
+    height: 50px;
+    background: rgba(176, 54, 247, 0.2);
+    margin-top: 5%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+}
+
+.simbolo-format-multas i {
+    font-size: 20px;
+    color: rgba(176, 54, 247);
+}
+
+.espaco-dsa {
+    width: 100%;
+    height: 8px;
+}
+
+.overflow-multas {
+    width: 90%;
+    height: auto;
+    max-height: 200px;
+    margin-top: 3%;
+    margin-left: 5%;
+    overflow: auto;
+}
+
+.item-multas {
+    width: 98%;
+    border-radius: 20px;
+    height: auto;
+    padding-bottom: 10px;
+    margin-top: 2%;
+    border: 1px solid rgb(29, 28, 28,0.2);
+    transition: all .5s;
+}
+
+.item-multas:hover {
+    border: 1px solid rgba(176, 54, 247);
+}
+
+.titlo-multa {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.titlo-multa span {
+    color: rgba(176, 54, 247);
+}
+
+.item-multas.ativo {
+    border: 1px solid rgba(176, 54, 247);
+}
+
+.titlo-multa ss {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 16px;
+    background: #1D1C1C;
+    outline: 2px solid rgba(29, 28, 28, 0.2);
+    margin-left: 10px;
+}
+
+.motivo-multa {
+    width: 90%;
+    font-size: 14px;
+    margin-left: 5%;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 2%;
+}
+
+.hud {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0%;
+    width: 350px;
+    height: 80px;
+}
+
+.hud2 {
+    position: absolute;
+    bottom: 0%;
+    width: 80%;
+    margin-left: 10%;
+    height: 110px;
+    background: radial-gradient(48.99% 48.99% at 50.18% 100%, rgba(254, 62, 62, 0.5) 0%, rgba(255, 75, 75, 0) 100%);
+    border-radius: 250px 250px 0px 0px;
+}
+
+.roubo-atm {
+    display: flex;
+}
+
+.simbolo-roubo {
+    width: 50px;
+    height: 50px;
+    background: rgba(247, 54, 54, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+}
+
+.simbolo-roubo i {
+    font-size: 20px;
+    color: rgba(247, 54, 54);
+}
+
+.background-text-roubo {
+    width: auto;
+    margin-left: 5%;
+    height: 100%;
+    margin-top: 1.5%;
+    text-align: center;
+}
+
+.texto-roubo {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+}
+
+.texto-roubo2 {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+}
+
+.texto-roubo b {
+    color: rgba(247, 54, 54);
+}
+
+.texto-roubo2 b {
+    color: rgba(247, 54, 54);
+}
+
+.semmultas {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.semmultas-t1 {
+    display: flex;
+    width: auto;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2%;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.simbolo-format-sem-multas {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+}
+
+.simbolo-format-sem-multas i {
+    font-size: 20px;
+    color: rgba(176, 54, 247);
+}
+
+.botao-confirmar-format2 {
+    width: 40%;
+    height: 40px;
+    bottom: 5%;
+    margin-left: 30%;
+    margin-top: 5%;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border-radius: 10px;
+    background: #D7FE03;
+    outline: 4px solid #D7FE0340;
+    color: rgb(29, 28, 28);
+    transition: all .5s;
+}
+
+.botao-confirmar-format2:hover {
+    background: #bcdb09;
+}
+
+.investimentosb-box {
+    width: 330px;
+    height: 280px;
+    border-radius: 30px;
+    background: #1D1C1C;
+    margin-top: 1%;
+    outline: 4px solid rgba(29, 28, 28, 0.2);
+}
+
+.investimentosb-boxt1 {
+    position: relative;
+    margin-left: 10%;
+    top: 7%;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.cryptos-box {
+    width: 330px;
+    height: 300px;
+    margin-top: 1.5%;
+    border-radius: 30px;
+    background: #fff;
+}
+
+.cryptos-boxt1 {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    color: #1D1C1C;
+    margin-left: 10%;
+    top: 5%;
+    position: relative;
+}
+
+.cryptos-boxt2 {
+    font-family: "Urbanist", sans-serif;
+    margin-left: 10%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 6.5%;
+    color: rgba(29, 28, 28, 0.4);
+}
+
+.cryptos-boxt2 b {
+    color: #1D1C1C;
+}
+
+.chart-container-circle {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 8%;
+}
+
+.investimentosb-boxt2 {
+    margin-left: 10%;
+    margin-top: 2%;
+    width: 80%;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px;
+    color: rgba(255, 255, 255);
+}
+
+.crypto-box-meus-overflow {
+    width: 80%;
+    height: 67%;
+    overflow: auto;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+.item-crypto-meus {
+    width: 98%;
+    height: 60px;
+    background: #F5F5F8;
+    border-radius: 10px;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+}
+
+.item-crypto-meus img {
+    max-width: 30px;
+    max-height: 30px;
+    border-radius: 10px;
+    margin-left: 5%;
+}
+
+.texto1-crypto-meus {
+    margin-left: 4%;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.texto2-crypto-meus {
+    margin-right: 5%;
+    margin-left: auto;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.texto2-crypto-meus span {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #D7FE03;
+    border-radius: 20px;
+}
+
+.vender-crypto-meus {
+    margin-right: 5%;
+    margin-left: auto;
+    display: none;
+    background: #D7FE03;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: all .5s;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #1D1C1C;
+    border-radius: 10px;
+    outline: 2px solid rgb(215, 254, 3,0.2);
+    animation-name: zoomIn;
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+}
+
+.vender-crypto-meus:hover {
+    background: #c4e606;
+}
+
+.item-crypto-meus:hover .texto2-crypto-meus {
+    display: none;
+}
+
+.item-crypto-meus:hover .vender-crypto-meus {
+    display: block;
+}
+
+.anuncios-box-investimentos {
+    width: 200px;
+    height: 240px;
+    border-radius: 30px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-ads-investimentos {
+    width: 180px;
+    height: 90%;
+    border-radius: 30px;
+    background: #D7FE03;
+}
+
+.card-espaco-investimentos {
+    width: 10px;
+    height: 90%;
+}
+
+.card-ads-investimentos img {
+    margin-top: 10%;
+    height: 65%;
+    margin-left: 5%;
+}
+
+.card-adst3 {
+    width: 70%;
+    margin-top: -1%;
+    margin-left: 10%;
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #1D1C1C;
+}
+
+.crypto-top-buyers {
+    width: 65%;
+    height: 240px;
+    background: white;
+    border-radius: 30px;
+    margin-left: 20px;
+}
+
+.box-cypto-grafico-search {
+    width: 100%;
+    height: 57%;
+    margin-top: 20px;
+    border-radius: 20px;
+    background: white;
+    display: flex;
+}
+
+.box-cypto-grafico-search-text1 {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    color: #1D1C1C;
+    margin-left: 5%;
+    top: 5%;
+    position: relative;
+}
+
+.box-cypto-grafico-search-text2 {
+    font-family: "Urbanist", sans-serif;
+    margin-left: 5%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 3%;
+    color: rgba(29, 28, 28, 0.4);
+}
+
+.box-cypto-grafico-search-text2 b {
+    color: #1D1C1C;
+}
+
+.box-cypto-grafico-search-box1 {
+    width: 30%;
+    height: 100%;
+}
+
+.box-cypto-grafico-search-box1-cima {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    transition: all .5s;
+    border-radius: 20px 0px 20px 0px;
+    align-items: center;
+}
+
+.box-cypto-grafico-search-box1-cima:hover {
+    transform: scale(1.05);
+}
+
+.box-cypto-grafico-search-box1-cima img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 10%;
+}
+
+.box-cypto-grafico-search-box1-cima-dentro {
+    width: 65%;
+    height: 60%;
+    margin-left: 5%;
+}
+
+.box-cypto-grafico-search-box1-cima-dentrot1 {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    color: rgb(29, 28, 28,0.6);
+}
+
+.box-cypto-grafico-search-box1-cima-dentrot2 {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: rgb(29, 28, 28);
+}
+
+.box-cypto-grafico-search-box1-cima-dentrot2 i {
+    margin-left: 5%;
+    font-size: 14px;
+}
+
+.box-cypto-grafico-search-box1-baixo {
+    height: 75%;
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    transition: all .5s;
+    border-radius: 0px 20px 0px 20px;
+    align-items: center;
+    background: #1D1C1C;
+}
+
+.box-cypto-grafico-search-box1-baixo-lado {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.box-cypto-grafico-search-box1-baixo-ladot1 {
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    ; font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.box-cypto-grafico-search-box1-baixo-lado2 {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-cypto-grafico-search-box1-baixo-lado2c1 {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.box-cypto-grafico-search-box1-baixo-lado2c1-box {
+    width: auto;
+    height: auto;
+    margin-top: 40%;
+}
+
+.box-cypto-grafico-search-box1-baixo-lado2c1-box:nth-child(1) {
+    margin-top: 0%;
+}
+
+.box-cypto-grafico-search-box1-baixo-lado2c2 {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(255, 255, 255);
+}
+
+.box-cypto-grafico-search-box1-baixo-lado2c1-box-geral {
+    width: auto;
+    height: auto;
+}
+
+.box-cypto-grafico-search-box1-baixo-lado2-grafico {
+    width: 65%;
+    margin-left: 3%;
+    height: 70%;
+    margin-top: 15.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box4-box {
+    width: 480px;
+    height: 68.7%;
+    position: absolute;
+    top: 27.5%;
+    left: 66.5%;
+    background: white;
+    border-radius: 20px;
+}
+
+.crypto-top-boxt1 {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    color: #1D1C1C;
+    margin-left: 10%;
+    top: 10%;
+    position: relative;
+}
+
+.crypto-top-buyers-overflow {
+    width: 90%;
+    height: 62%;
+    margin-top: 10%;
+    margin-left: 5%;
+    overflow: auto;
+}
